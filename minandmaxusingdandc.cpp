@@ -35,18 +35,15 @@ struct pair getMinMax(int arr[], int low, int high)
      return minmax; 
   } 
     
-  /* If there are more than 2 elements */
   mid = (low + high)/2;   
   mml = getMinMax(arr, low, mid); 
   mmr = getMinMax(arr, mid+1, high);   
     
-  /* compare minimums of two parts*/
   if (mml.min < mmr.min) 
     minmax.min = mml.min; 
   else
     minmax.min = mmr.min;      
   
-  /* compare maximums of two parts*/
   if (mml.max > mmr.max) 
     minmax.max = mml.max; 
   else
@@ -54,11 +51,9 @@ struct pair getMinMax(int arr[], int low, int high)
    
   return minmax; 
 } 
-  
-/* Driver program to test above function */
 int main() 
 { 
-  int arr[] = {1000, 445, 1, 330, 3000,456,3343,567567,0,-44}; 
+  int arr[] = {10, 4, 6,0,-23,8,9,1,34,66}; 
   int arr_size = 10; 
   struct pair minmax = getMinMax(arr, 0, arr_size-1); 
   printf("Minimum element is %d \n", minmax.min); 
