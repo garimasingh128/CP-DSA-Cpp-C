@@ -6,7 +6,7 @@ int low;
 int high;
 };
 
-lowhigh probabilty(char arr[], int n,  int cf[],char word, int pro[])
+lowhigh probabilty(char arr[], int n,  int cf[],char word, int pro[], int x)
 {
 struct lowhigh lh;
 /**for(int i=0;i<n;i++)
@@ -20,11 +20,11 @@ else
 lh.low=lh.low+pro[i];
 }
 }*/
-lh.high=cf[word+1]; lh.low=cf[word];
+lh.high=cf[x+1]; lh.low=cf[x];
 
 for(int i=0;i<n;i++)
 {
-pro[i]=pro[i]*pro[word];
+pro[i]=pro[i]*pro[x];
 }
 for(int i=0;i<n+1;i++)
 {
@@ -32,15 +32,15 @@ cf[i]=cf[i]+pro[i];
 }
 return lh;
 }
-void swap(int *xp, int *yp)
+void swap(char *xp, char *yp)
 {
-    int temp = *xp;
+    char temp = *xp;
     *xp = *yp;
     *yp = temp;
 }
 
 // An optimized version of Bubble Sort
-void bubbleSort(char arr[], int n, int c[])
+void bubbleSort(int arr[], int n, char c[])
 {
    int i, j;
    bool swapped;
@@ -51,8 +51,12 @@ void bubbleSort(char arr[], int n, int c[])
      {
         if (arr[j] > arr[j+1])
         {
-           swap(&arr[j], &arr[j+1]);
+           char temp;
+           temp=arr[j+1];
+           arr[j+1]=arr[j];
+           arr[j]=temp;
            swap(&c[j], &c[j+1]);
+           
            swapped = true;
         }
      }
@@ -69,12 +73,13 @@ int n;
 cout<<"enter n";
 cin>>n;
 char arr[n];
-string word;
+char word[n];
 int pro[n];
 for(int i=0;i<n;i++)
 {
     cout<<"enter letter and its probabailty";
-cin>>arr[i]>>pro[i];}
+cin>>arr[i]>>pro[i];
+}
 bubbleSort(pro,n,arr);
 int cf[n];
 
@@ -83,12 +88,13 @@ for(int i=0;i<n+1;i++)
 cf[i]=cf[i]+pro[i];
 }
 cout<<"enter word";
-getline(word);
+cin>>word;
 
 struct lowhigh lh;
-for(int i=0;i<word.length()-1;i++)
+for(int i=0;i<strlen(word);i++)
 {
-lh=probabilty(arr,n,cf,word[i],pro);
+	int x=i;
+lh=probabilty(arr,n,cf,word[i],pro,x);
 }
 double mean=(lh.low+lh.high)/2;
 cout<<mean;
