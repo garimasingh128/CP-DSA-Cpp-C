@@ -1,5 +1,6 @@
 #include <iostream>
 #include<bits/stdc++.h>
+#include<vectors>
 using namespace std;
 pair<int,int> vecount(int **graph, int v, int sv, bool *visited){
     if(v==0){
