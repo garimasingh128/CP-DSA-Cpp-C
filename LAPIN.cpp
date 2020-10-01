@@ -2,7 +2,7 @@
 using namespace std;
 #include <bits/stdc++.h>
 
-int main() {
+void main() {
 	// your code goes here
 	int t;
 	cin>>t;
@@ -29,5 +29,5 @@ int main() {
             cout << "NO\n";
         }
     }
-    return 0;
+
 }
