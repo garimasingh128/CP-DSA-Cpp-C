@@ -1,0 +1,44 @@
+#include <iostream>
+#include<algorithm>
+#include<cmath>
+using namespace std;
+
+void printAllPaths(int maze[][4], bool visited[][4], int sr, int sc, int dr, int dc, string ans){
+
+    if(sr == dr && sc == dc){
+        cout<<ans<<endl;
+        return;
+    }
+
+    if(sr < 0 || sr > dr || sc < 0 || sc > dc || maze[sr][sc] == 0 || visited[sr][sc] == true){
+        return;
+    }
+
+    visited[sr][sc] = true;
+    printAllPaths(maze, visited, sr+1, sc, dr, dc, ans+'D');
+    printAllPaths(maze, visited, sr, sc-1, dr, dc, ans+'L');
+    printAllPaths(maze, visited, sr-1, sc, dr, dc, ans+'T');
+    printAllPaths(maze, visited, sr, sc+1, dr, dc, ans+'R');
+    visited[sr][sc] = false;
+}
+    
+
+
+
+int main() {
+    
+    int arr[4][4] = {
+        {1,0,1,1},
+        {1,1,1,1},
+        {1,0,1,1},
+        {1,1,0,1}
+    };
+    bool visited[4][4] = {
+        {0},
+        {0},
+        {0},
+        {0}
+    };
+    printAllPaths(arr, visited, 0,0,3,3,"");
+    return 0;
+}
