@@ -3,7 +3,8 @@ using namespace std;
 
 void solve(){
   int n,k;
-  cin>>n>>k;
+  cin>>n;
+  cin>>k;
   string s;
   cin>>s;
   sort(s.begin(),s.end());
@@ -27,7 +28,8 @@ void solve(){
 }
 
 int main(){
-  int t; cin>>t;
+  int t; 
+  cin>>t;
   while (t--)
     solve();
 }
