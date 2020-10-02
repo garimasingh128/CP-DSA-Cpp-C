@@ -1,0 +1,5 @@
+# Windows
+*.exe
+
+# Linux and mac
+*.out
