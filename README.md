@@ -1,4 +1,7 @@
-<<<<<<< master
+
+# Data-structures-and-algorithms
+All the basic and advanced data structures and algorithms implemented either in C or C++. This is the part of my data structures and analysis of algorithms laboratory work in which I wrote the following codes by myself. Any contributions and PRs' having some new algorithms and using some different data structures are most welcome to enhance the diversity of the current repository.
+
 <div class="Box-header d-flex flex-items-center flex-justify-between bg-white border-bottom-0" style='box-sizing: border-box; padding: 16px; margin: -1px -1px 0px; background-color: rgb(255, 255, 255); border-top: 1px solid rgb(225, 228, 232); border-right: 1px solid rgb(225, 228, 232); border-bottom: 0px !important; border-left: 1px solid rgb(225, 228, 232); border-image: initial; border-radius: 6px 6px 0px 0px; justify-content: space-between !important; align-items: center !important; display: flex !important; color: rgb(36, 41, 46); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial;'>
     <h2 class="Box-title pr-3" style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; font-weight: 600; font-size: 14px; padding-right: 16px !important;">README.md</h2>
 </div>
@@ -14,9 +17,6 @@
         <p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 0px !important;">All the basic and advanced data structures and algorithms implemented either in C or C++. This is the part of my data structures and analysis of algorithms laboratory work in which I wrote the following codes by myself. Any contributions and PRs&#39; having some new algorithms and using some different data structures are most welcome to enhance the diversity of the current repository.</p>
     </article>
 </div>
-=======
-# Data-structures-and-algorithms
-All the basic and advanced data structures and algorithms implemented either in C or C++. This is the part of my data structures and analysis of algorithms laboratory work in which I wrote the following codes by myself. Any contributions and PRs' having some new algorithms and using some different data structures are most welcome to enhance the diversity of the current repository.
 
 # List of Algorithms in DSA
 1)BullAndCowHackerrank.cpp  
@@ -94,4 +94,3 @@ All the basic and advanced data structures and algorithms implemented either in 
 73)vasyanadsocks.cpp  
 74)xorcpp.cpp  
   
->>>>>>> master
