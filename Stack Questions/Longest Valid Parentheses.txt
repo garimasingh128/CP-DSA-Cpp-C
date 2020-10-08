@@ -1,0 +1,44 @@
+#include<map>
+#include<set>
+#include<iterator>
+#include<algorithm>
+#include<cstring>
+#include<climits>
+#include<cstdlib>
+#include<cstdio>
+#include<stack>
+using namespace std;
+int main()
+ {
+	//code
+        int t;
+        cin>>t;
+        while(t--)
+        {
+            string input;
+            cin>>input;
+            stack<int> s;
+            s.push(-1);
+            int maxCount=INT_MIN;
+           // vector<int> v;
+            for(int i=0;input[i]!='\0';i++)
+            {
+                if(input[i]=='(')
+                    s.push(i);
+                else
+                {
+                    s.pop();
+                    if(s.empty())
+                        s.push(i);
+                    else
+                    {
+                        if(i-s.top()>maxCount)
+                            maxCount=i-s.top();
+                    }
+                }
+            }
+            cout<<maxCount<<endl;
+            //cout<<maxCount<<endl;
+        }
+	return 0;
+}
