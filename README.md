@@ -94,4 +94,7 @@ All the basic and advanced data structures and algorithms implemented either in 
 72)valhallasiege.cpp  
 73)vasyanadsocks.cpp  
 74)xorcpp.cpp  
+75)Bubble_sort.cpp
+76)Find frequency of elements in an array.c
+77)Find Leap year or not.cpp
   
